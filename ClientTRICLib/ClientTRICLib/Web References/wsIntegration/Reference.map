@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?wsdl" filename="ServiceIntegrator.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd5" filename="wsintegrator.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd0" filename="wsintegrator0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd1" filename="wsintegrator1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd3" filename="wsintegrator2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd4" filename="wsintegrator3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd2" filename="wsintegrator4.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

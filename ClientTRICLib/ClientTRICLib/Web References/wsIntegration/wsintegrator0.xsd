@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/wsintegrator.Data" />
+  <xs:import schemaLocation="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetOperations">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOperationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/wsintegrator.Data" minOccurs="0" name="GetOperationsResult" nillable="true" type="q1:ArrayOfOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOperationParams">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOperationParamsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/wsintegrator.Data" minOccurs="0" name="GetOperationParamsResult" nillable="true" type="q2:ArrayOfOperationParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationByIdInvoke">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ticket" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="operationIDKeys" nillable="true" type="q3:ArrayOfint" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/wsintegrator.Data" minOccurs="0" name="requestParamValues" nillable="true" type="q4:ArrayOfOperationValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationByIdInvokeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OperationByIdInvokeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationByNameInvoke">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ticket" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="operationNames" nillable="true" type="q5:ArrayOfstring" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/wsintegrator.Data" minOccurs="0" name="requestParamValues" nillable="true" type="q6:ArrayOfOperationValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OperationByNameInvokeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OperationByNameInvokeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorizationTicket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorizationTicketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAuthorizationTicketResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

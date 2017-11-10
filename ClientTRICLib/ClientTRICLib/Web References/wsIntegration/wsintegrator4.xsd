@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wsintegrator.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wsintegrator.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://is2.itpc.ru:333/wsintegrator.ServiceIntegrator.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:complexType name="ArrayOfOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Operation" nillable="true" type="tns:Operation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperation" nillable="true" type="tns:ArrayOfOperation" />
+  <xs:complexType name="Operation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SqlCommandTimeoutSeconds" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Operation" nillable="true" type="tns:Operation" />
+  <xs:complexType name="ArrayOfOperationParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperationParam" nillable="true" type="tns:OperationParam" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperationParam" nillable="true" type="tns:ArrayOfOperationParam" />
+  <xs:complexType name="OperationParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NameParam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationId" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="ValueType" type="q1:SqlDbType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationParam" nillable="true" type="tns:OperationParam" />
+  <xs:complexType name="ArrayOfOperationValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperationValue" nillable="true" type="tns:OperationValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperationValue" nillable="true" type="tns:ArrayOfOperationValue" />
+  <xs:complexType name="OperationValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NameParam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationId" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="ValueType" type="q2:SqlDbType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationValue" nillable="true" type="tns:OperationValue" />
+</xs:schema>
